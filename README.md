@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+
 <html lang="si">
 <head>
   <meta charset="UTF-8" />
@@ -277,7 +278,7 @@
     <div class="hero">
       <div class="hero-left">
         <span class="tag">📚 Learn with Dakshitha Teach LK</span>
-        <h1>Dakshitha Teach LK</h1>
+        <h1>Dakshitha </h1>
         <p class="sub">
           “Dakshitha Teach LK” කියන්නේ Teach සම්බන්දව කියල දෙන Youtube Chanel එකකි ...
 
@@ -310,7 +311,8 @@
         <span class="pill">🎓 Lessons</span>
         <h3>Educational Content</h3>
         <p>
-          ...
+          Grade 6-11 / O/L / A/L වගේ classes වලට අදාළ
+          lessons, explanations, සහ paper discussions දාන්න පුළුවන්.
         </p>
       </div>
 
@@ -318,7 +320,8 @@
         <span class="pill">🧠 Tips</span>
         <h3>Study Tips & Tricks</h3>
         <p>
-          ...
+          Time management, note making, exam tips,
+          සහ fast learning methods මෙතන explain කරන්න.
         </p>
       </div>
 
@@ -326,7 +329,8 @@
         <span class="pill">🚀 Growth</span>
         <h3>Weekly Uploads</h3>
         <p>
-          ...
+          Regular schedule එකක් තියෙනවා නම් මෙතන දාන්න.
+          (Ex: Every Monday & Friday)
         </p>
       </div>
     </div>
@@ -354,7 +358,7 @@
           allowfullscreen>
         </iframe>
       </div>
-    </div>
+    
 
     <!-- CONTACT -->
     <h2 class="section-title" id="contact">Contact</h2>
@@ -371,7 +375,7 @@
           <textarea class="input" id="msg" placeholder="Your Message"></textarea>
           <button class="btn btn-primary" onclick="sendMessage()">Send</button>
         </div>
-      </div>
+     
 
       <div class="card">
         <h3>Dakshitha Teach LK Links</h3>
@@ -381,14 +385,11 @@
 
         <div style="margin-top:14px; display:flex; flex-direction:column; gap:10px;">
           <button class="btn btn-outline" onclick="openChannel()"> YouTube Channel</button>
-          <button class="btn btn-outline" onclick="openLink('https://www.facebook.com/share/1BdjwhPkCX/?mibextid=wwXIfr')"> Facebook</button>
-          <button class="btn btn-outline" onclick="openLink('https://www.instagram.com/dakshithasuhasmith?igsh=NnQ1ZGY2OGVxMTI%3D&utm_source=qr')"> Instagram</button>
+          <button class="btn btn-outline" onclick="openLink('https://www.facebook.com')"> Facebook</button>
+          <button class="btn btn-outline" onclick="openLink('https://www.instagram.com')"> Instagram</button>
           <button class="btn btn-outline" onclick="openLink('https://www.tiktok.com/@dakshitha.suhasmi6?_r=1&_t=ZS-943MuzrIjsi')"> TikTok</button>
         </div>
-      </div>
-    </div>
 
-  </div>
 
   <footer>
     © <span id="year"></span> DAKSHITHA TEACH LK
@@ -428,6 +429,3 @@
 
     document.getElementById("year").innerText = new Date().getFullYear();
   </script>
-
-</body>
-</html>
