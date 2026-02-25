@@ -308,29 +308,13 @@
     <h2 class="section-title" id="about">About Dakshitha Teach LK</h2>
     <div class="grid">
       <div class="card">
-        <span class="pill">🎓 Lessons</span>
-        <h3>Educational Content</h3>
+        <span class="pill">Teach</span>
+        <h3>Teachinc Work</h3>
         <p>
-          Grade 6-11 / O/L / A/L වගේ classes වලට අදාළ
-          lessons, explanations, සහ paper discussions දාන්න පුළුවන්.
+          You can get any Teachnic knowledge.
         </p>
       </div>
 
-      <div class="card">
-        <span class="pill">🧠 Tips</span>
-        <h3>Study Tips & Tricks</h3>
-        <p>
-          Time management, note making, exam tips,
-          සහ fast learning methods මෙතන explain කරන්න.
-        </p>
-      </div>
-
-      <div class="card">
-        <span class="pill">🚀 Growth</span>
-        <h3>Weekly Uploads</h3>
-        <p>
-          Regular schedule එකක් තියෙනවා නම් මෙතන දාන්න.
-          (Ex: Every Monday & Friday)
         </p>
       </div>
     </div>
@@ -384,9 +368,9 @@
         </p>
 
         <div style="margin-top:14px; display:flex; flex-direction:column; gap:10px;">
-          <button class="btn btn-outline" onclick="openChannel()"> YouTube Channel</button>
-          <button class="btn btn-outline" onclick="openLink('https://www.facebook.com')"> Facebook</button>
-          <button class="btn btn-outline" onclick="openLink('https://www.instagram.com')"> Instagram</button>
+          <button class="btn btn-outline" onclick="openChannel('https://www.youtube.com/@DakshithaTeachLK')"> YouTube Channel</button>
+          <button class="btn btn-outline" onclick="openLink('https://www.facebook.com/share/1NN8qoHpLi/?mibextid=wwXIfr')"> Facebook</button>
+          <button class="btn btn-outline" onclick="openLink('https://www.instagram.com/dakshithasuhasmith?igsh=NnQ1ZGY2OGVxMTI%3D&utm_source=qr')"> Instagram</button>
           <button class="btn btn-outline" onclick="openLink('https://www.tiktok.com/@dakshitha.suhasmi6?_r=1&_t=ZS-943MuzrIjsi')"> TikTok</button>
         </div>
 
