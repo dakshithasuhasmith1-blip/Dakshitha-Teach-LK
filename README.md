@@ -326,7 +326,7 @@
       <div class="video-card">
         <!-- Replace VIDEO_ID_1 with your YouTube video ID -->
         <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID_1"
+          src="https://youtu.be/58hQzmN1osQ?si=TTTBGkL6yIDd-3Yt"
           title="Dakshitha Teach LK - Video 1"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
