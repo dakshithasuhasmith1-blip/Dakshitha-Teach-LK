@@ -1,415 +1,207 @@
-
-
-<html lang="si">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dakshitha Teach LK</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAKSHITHA TECH LK</title>
 
-  <style>
-    :root{
-      --light-red: #ff6b6b;
-      --light-blue: #4dabf7;
-      --dark: #0f172a;
-      --text: #1f2937;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --border: rgba(15, 23, 42, 0.10);
-    }
+<style>
 
-    *{ margin:0; padding:0; box-sizing:border-box; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
-    body{ background: var(--bg); color: var(--text); }
+body{
+margin:0;
+font-family:Arial, sans-serif;
+color:#fff;
+background:#000;
+}
 
-    /* Navbar */
-    .nav{
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(255,255,255,0.75);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner{
-      max-width: 1100px;
-      margin: auto;
-      padding: 14px 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 14px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      font-weight: 900;
-      letter-spacing: 0.2px;
-      color: var(--dark);
-    }
-    .logo{
-      width: 40px;
-      height: 40px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--light-red), var(--light-blue));
-      box-shadow: 0 10px 30px rgba(77, 171, 247, 0.25);
-    }
-    .nav a{
-      text-decoration:none;
-      color: var(--text);
-      font-weight: 700;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-    .links{
-      display:flex;
-      gap: 16px;
-      align-items:center;
-    }
-    .btn{
-      border: none;
-      cursor:pointer;
-      padding: 10px 14px;
-      border-radius: 14px;
-      font-weight: 800;
-      font-size: 14px;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    .btn-primary{
-      color: white;
-      background: linear-gradient(135deg, var(--light-red), var(--light-blue));
-      box-shadow: 0 12px 25px rgba(255, 107, 107, 0.25);
-    }
-    .btn:hover{ transform: translateY(-1px); }
+/* BACKGROUND IMAGE */
 
-    /* Hero */
-    .container{ max-width: 1100px; margin: auto; padding: 30px 18px; }
-    .hero{
-      display:grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 18px;
-      align-items: stretch;
-      margin-top: 10px;
-    }
-    .hero-left{
-      background: linear-gradient(135deg, rgba(255,107,107,0.18), rgba(77,171,247,0.18));
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 26px;
-      position: relative;
-      overflow:hidden;
-    }
-    .hero-left::before{
-      content:"";
-      position:absolute;
-      inset:-40px;
-      background: radial-gradient(circle at 20% 20%, rgba(255,107,107,0.35), transparent 50%),
-                  radial-gradient(circle at 80% 30%, rgba(77,171,247,0.35), transparent 55%);
-      filter: blur(18px);
-      opacity: 0.9;
-      pointer-events:none;
-    }
-    .hero-left *{ position: relative; }
-    .tag{
-      display:inline-block;
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 13px;
-      background: rgba(255,255,255,0.65);
-      border: 1px solid var(--border);
-    }
-    h1{
-      margin-top: 14px;
-      font-size: 44px;
-      line-height: 1.05;
-      color: var(--dark);
-      letter-spacing: -0.8px;
-    }
-    .sub{
-      margin-top: 12px;
-      font-size: 16px;
-      opacity: 0.9;
-      max-width: 60ch;
-      line-height: 1.6;
-    }
-    .cta-row{
-      margin-top: 18px;
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .btn-outline{
-      background: white;
-      border: 1px solid var(--border);
-      color: var(--dark);
-      box-shadow: 0 10px 18px rgba(15, 23, 42, 0.06);
-    }
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
 
-    .hero-right{
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 18px;
-      display:flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .stat{
-      padding: 14px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: linear-gradient(135deg, rgba(255,107,107,0.10), rgba(77,171,247,0.10));
-    }
-    .stat .num{ font-size: 26px; font-weight: 900; color: var(--dark); }
-    .stat .label{ font-size: 13px; opacity: 0.8; margin-top: 3px; }
+background:url("logo.png") center/contain no-repeat;
 
-    /* Sections */
-    .section-title{
-      margin-top: 34px;
-      margin-bottom: 14px;
-      font-size: 22px;
-      font-weight: 900;
-      color: var(--dark);
-      letter-spacing: -0.2px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 16px;
-      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04);
-      transition: transform 0.15s ease;
-    }
-    .card:hover{ transform: translateY(-2px); }
-    .pill{
-      display:inline-block;
-      font-size: 12px;
-      font-weight: 900;
-      padding: 6px 10px;
-      border-radius: 999px;
-      color: white;
-      background: linear-gradient(135deg, var(--light-red), var(--light-blue));
-    }
-    .card h3{ margin-top: 10px; font-size: 16px; color: var(--dark); }
-    .card p{ margin-top: 6px; font-size: 14px; opacity: 0.85; line-height: 1.55; }
+opacity:0.15;   /* image eka fade karanna */
 
-    /* Video Section */
-    .video-wrap{
-      margin-top: 12px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    .video-card{
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      overflow:hidden;
-    }
-    iframe{ width: 100%; height: 320px; border: 0; }
+z-index:-1;
+}
 
-    /* Contact */
-    .contact{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    .input{
-      width: 100%;
-      padding: 12px 14px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      outline: none;
-      font-size: 14px;
-      background: white;
-    }
-    textarea.input{ min-height: 120px; resize: vertical; }
+/* HEADER */
 
-    /* Footer */
-    footer{
-      margin-top: 36px;
-      padding: 20px 18px;
-      border-top: 1px solid var(--border);
-      text-align:center;
-      opacity: 0.75;
-      font-size: 13px;
-    }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:linear-gradient(90deg,#000000,#1c1c1c,#c0c0c0,#ffd700);
+box-shadow:0 0 25px #ffd700;
+}
 
-    /* Responsive */
-    @media (max-width: 900px){
-      .hero{ grid-template-columns: 1fr; }
-      .grid{ grid-template-columns: 1fr; }
-      .video-wrap{ grid-template-columns: 1fr; }
-      iframe{ height: 260px; }
-      .contact{ grid-template-columns: 1fr; }
-      h1{ font-size: 36px; }
-    }
-  </style>
+header h1{
+color:#ffd700;
+letter-spacing:3px;
+font-size:28px;
+}
+
+/* NAV */
+
+nav a{
+margin:15px;
+color:#e6e6e6;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ffd700;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h2{
+font-size:55px;
+color:#ffd700;
+text-shadow:0 0 25px #ffd700;
+}
+
+.hero p{
+font-size:20px;
+color:#c0c0c0;
+}
+
+.btn{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+background:linear-gradient(45deg,#ffd700,#c0c0c0);
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px #ffd700;
+}
+
+/* CARDS */
+
+.cards{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:80px;
+flex-wrap:wrap;
+}
+
+.card{
+background:linear-gradient(145deg,#111,#2a2a2a);
+padding:40px;
+width:250px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px #c0c0c0;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px #ffd700;
+}
+
+.card h3{
+color:#ffd700;
+}
+
+.card p{
+color:#c0c0c0;
+}
+
+.card a{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:linear-gradient(45deg,#ffd700,#c0c0c0);
+color:black;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+text-align:center;
+padding:20px;
+color:#c0c0c0;
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <div class="nav">
-    <div class="nav-inner">
-      <div class="brand">
-        <div class="logo"></div>
-        <div>DAKSHITHA TEACH LK</div>
-      </div>
+<header>
+<h1>DAKSHITHA TECH LK</h1>
 
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#videos">Videos</a>
-        <a href="#contact">Contact</a>
-        <button class="btn btn-primary" onclick="openChannel()">Subscribe</button>
-      </div>
-    </div>
-  </div>
+<nav>
+<a href="#">Home</a>
+<a href="#">Videos</a>
+<a href="#">Tutorials</a>
+<a href="#">Social</a>
+<a href="#">Contact</a>
+</nav>
+</header>
 
-  <div class="container">
+<section class="hero">
+<h2>Welcome To Dakshitha Tech LK</h2>
+<p>Tech Reviews • Tutorials • Gadgets • Tips</p>
+<button class="btn">Explore Now</button>
+</section>
 
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-left">
-        <span class="tag">📚 Learn with Dakshitha Teach LK</span>
-        <h1>Dakshitha </h1>
-        <p class="sub">
-          “Dakshitha Teach LK” කියන්නේ Teach සම්බන්දව කියල දෙන Youtube Chanel එකකි ...
+<section class="cards">
 
-        <div class="cta-row">
-          <button class="btn btn-primary" onclick="scrollToSection('videos')">Watch Latest</button>
-          <button class="btn btn-outline" onclick="scrollToSection('about')">About Channel</button>
-        </div>
-      </div>
+<div class="card">
+<h3>YouTube</h3>
+<p>Watch latest tech videos</p>
+<a href="#">Visit Channel</a>
+</div>
 
-      <div class="hero-right">
-        <div class="stat">
-          <div class="num" id="subs">0+</div>
-          <div class="label">Subscribers </div>
-        </div>
-        <div class="stat">
-          <div class="num" id="views">0+</div>
-          <div class="label">Total Views </div>
-        </div>
-        <div class="stat">
-          <div class="num" id="uploads">0</div>
-          <div class="label">Uploads </div>
-        </div>
-      </div>
-    </div>
+<div class="card">
+<h3>Tech Tutorials</h3>
+<p>Learn new tech skills</p>
+<a href="#">View Tutorials</a>
+</div>
 
-    <!-- ABOUT -->
-    <h2 class="section-title" id="about">About Dakshitha Teach LK</h2>
-    <div class="grid">
-      <div class="card">
-        <span class="pill">Teach</span>
-        <h3>Teachinc Work</h3>
-        <p>
-          You can get any Teachnic knowledge.
-        </p>
-      </div>
+<div class="card">
+<h3>Social Media</h3>
+<p>Follow for daily tech content</p>
+<a href="#">Follow Now</a>
+</div>
 
-        </p>
-      </div>
-    </div>
+</section>
 
-    <!-- VIDEOS -->
-    <h2 class="section-title" id="videos">Latest Videos</h2>
+<footer>
+<p>© 2026 DAKSHITHA TECH LK</p>
+</footer>
 
-    <div class="video-wrap">
-      <div class="video-card">
-        <!-- Replace VIDEO_ID_1 with your YouTube video ID -->
-        <iframe
-          src="https://youtu.be/58hQzmN1osQ?si=TTTBGkL6yIDd-3Yt"
-          title="Dakshitha Teach LK - Video 1"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="video-card">
-        <!-- Replace VIDEO_ID_2 with your YouTube video ID -->
-        <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID_2"
-          title="Dakshitha Teach LK - Video 2"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    
-
-    <!-- CONTACT -->
-    <h2 class="section-title" id="contact">Contact</h2>
-    <div class="contact">
-      <div class="card">
-        <h3>Send a message</h3>
-        <p style="margin-top:6px; opacity:0.85;">
-          ඔයාලට තියන ප්‍රශ්න මට කියන්න ?
-        </p>
-
-        <div style="margin-top:12px; display:flex; flex-direction:column; gap:10px;">
-          <input class="input" id="name" placeholder="Your Name" />
-          <input class="input" id="email" placeholder="Your Email" />
-          <textarea class="input" id="msg" placeholder="Your Message"></textarea>
-          <button class="btn btn-primary" onclick="sendMessage()">Send</button>
-        </div>
-     
-
-      <div class="card">
-        <h3>Dakshitha Teach LK Links</h3>
-        <p style="margin-top:6px; opacity:0.85;">
-          මගේ Social Media link මෙතනිදී බලාගත හැක ...
-        </p>
-
-        <div style="margin-top:14px; display:flex; flex-direction:column; gap:10px;">
-          <button class="btn btn-outline" onclick="openChannel('https://www.youtube.com/@DakshithaTeachLK')"> YouTube Channel</button>
-          <button class="btn btn-outline" onclick="openLink('https://www.facebook.com/share/1NN8qoHpLi/?mibextid=wwXIfr')"> Facebook</button>
-          <button class="btn btn-outline" onclick="openLink('https://www.instagram.com/dakshithasuhasmith?igsh=NnQ1ZGY2OGVxMTI%3D&utm_source=qr')"> Instagram</button>
-          <button class="btn btn-outline" onclick="openLink('https://www.tiktok.com/@dakshitha.suhasmi6?_r=1&_t=ZS-943MuzrIjsi')"> TikTok</button>
-        </div>
-
-
-  <footer>
-    © <span id="year"></span> DAKSHITHA TEACH LK
-  </footer>
-
-  <script>
-    // 🔥 මෙතන ඔයාගේ YouTube channel link එක දාන්න
-    const CHANNEL_URL = "https://www.youtube.com/@DakshithaTeachLK";
-
-    function openChannel(){
-      window.open(CHANNEL_URL, "_blank");
-    }
-
-    function openLink(url){
-      window.open(url, "_blank");
-    }
-
-    function scrollToSection(id){
-      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    }
-
-    function sendMessage(){
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const msg = document.getElementById("msg").value.trim();
-
-      if(!name || !email || !msg){
-        alert("Please fill all fields 😊");
-        return;
-      }
-
-      alert("Thanks " + name + "! Message received (demo).");
-      document.getElementById("name").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("msg").value = "";
-    }
-
-    document.getElementById("year").innerText = new Date().getFullYear();
-  </script>
+</body>
+</html>
